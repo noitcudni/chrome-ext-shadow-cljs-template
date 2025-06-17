@@ -18,15 +18,15 @@
         {:shared
          {:entries []}
          :sw
-         {:init-fn demo.sw/init
+         {:init-fn {{name}}.sw/init
           :depends-on #{:shared}
           }
          :popup
-         {:init-fn demo.popup/init
+         {:init-fn {{name}}.popup/init
           :depends-on #{:shared}
           }
          :content
-         {:init-fn demo.content/init
+         {:init-fn {{name}}.content/init
           :depends-on #{:shared}}
          }}
 
@@ -37,7 +37,7 @@
   ;;           :devtools {:use-document-host false}
   ;;           :modules
   ;;           {:shared {:entries []}
-  ;;            :content {:init-fn demo.content/init
+  ;;            :content {:init-fn {{name}}.content/init
   ;;                      :depends-on #{:shared}}}}
 
   :prod {:target :esm
@@ -47,9 +47,9 @@
          :devtools {:use-document-host false}
          :modules
          {:shared {:entries []}
-          :sw {:init-fn demo.sw/init
+          :sw {:init-fn {{name}}.sw/init
                :depends-on #{:shared}}
-          :popup {:init-fn demo.popup/init
+          :popup {:init-fn {{name}}.popup/init
                   :depends-on #{:shared}}
-          :content {:init-fn demo.content/init
+          :content {:init-fn {{name}}.content/init
                     :depends-on #{:shared}}}}}}

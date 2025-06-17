@@ -1,0 +1,55 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies [[binaryage/chromex "0.8.6"]
+                [com.cognitect/transit-cljs "0.8.256"]
+                [reagent "0.8.1"]
+                [re-com "2.6.0"]]
+ :builds
+ {:ext {:target :esm
+        :output-dir "ext/js"
+        :runtime :browser
+        :compiler-options {:closure-output-charset "US-ASCII"}
+        :devtools {:use-document-host false}
+        :modules
+        {:shared
+         {:entries []}
+         :sw
+         {:init-fn demo.sw/init
+          :depends-on #{:shared}
+          }
+         :popup
+         {:init-fn demo.popup/init
+          :depends-on #{:shared}
+          }
+         :content
+         {:init-fn demo.content/init
+          :depends-on #{:shared}}
+         }}
+
+  ;; :content {:target :esm
+  ;;           :output-dir "ext/js"
+  ;;           :runtime :browser
+  ;;           :compiler-options {:closure-output-charset "US-ASCII"}
+  ;;           :devtools {:use-document-host false}
+  ;;           :modules
+  ;;           {:shared {:entries []}
+  ;;            :content {:init-fn demo.content/init
+  ;;                      :depends-on #{:shared}}}}
+
+  :prod {:target :esm
+         :output-dir "prod/js"
+         :runtime :browser
+         :compiler-options {:closure-output-charset "US-ASCII"}
+         :devtools {:use-document-host false}
+         :modules
+         {:shared {:entries []}
+          :sw {:init-fn demo.sw/init
+               :depends-on #{:shared}}
+          :popup {:init-fn demo.popup/init
+                  :depends-on #{:shared}}
+          :content {:init-fn demo.content/init
+                    :depends-on #{:shared}}}}}}

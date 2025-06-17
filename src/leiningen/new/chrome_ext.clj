@@ -4,7 +4,7 @@
 
 (def render (renderer "chrome-ext"))
 
-(defn chromex-ext
+(defn chrome-ext
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]

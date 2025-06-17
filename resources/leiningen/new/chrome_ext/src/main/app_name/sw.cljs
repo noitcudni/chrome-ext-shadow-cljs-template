@@ -1,8 +1,8 @@
-(ns demo.sw
+(ns {{name}}.sw
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [cljs.core.async :refer [<!]]
             [cljs.core.async.interop :refer-macros [<p!]]
-            [demo.common :refer [get-active-tab-id] :as common]))
+            [{{name}}.common :refer [get-active-tab-id] :as common]))
 
 (defn send-message-to-content []
   (go

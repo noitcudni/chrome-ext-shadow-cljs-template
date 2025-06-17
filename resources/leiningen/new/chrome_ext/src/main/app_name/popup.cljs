@@ -1,5 +1,5 @@
-(ns demo.popup
-  (:require [demo.common :as common]
+(ns {{name}}.popup
+  (:require [{{name}}.common :as common]
             [reagent.core :as reagent :refer [atom]]
             [re-com.core :as recom]
             )

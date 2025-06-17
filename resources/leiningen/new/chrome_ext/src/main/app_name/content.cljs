@@ -1,5 +1,5 @@
-(ns demo.content
-  (:require [demo.common :as common]))
+(ns {{name}}.content
+  (:require [{{name}}.common :as common]))
 
 (defn init []
   (js/console.log "content done!!")

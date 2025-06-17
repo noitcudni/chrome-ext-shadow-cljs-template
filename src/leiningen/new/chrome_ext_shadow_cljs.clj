@@ -14,11 +14,11 @@
              ["rollup.config.js" (render "rollup.config.js" data)]
              ["README.md" (render "README.md" data)]
              ["package.json" (render "package.json" data)]
-             ;; ["src/main/{{sanitized}}/common.cljs" (render "src/main/app_name/common.cljs" data)]
-             ;; ["src/main/{{sanitized}}/popup.cljs" (render "src/main/app_name/popup.cljs" data)]
-             ;; ["src/main/{{sanitized}}/content.cljs" (render "src/main/app_name/content.cljs" data)]
-             ;; ["src/main/{{sanitized}}/bg.cljs" (render "src/main/app_name/bg.cljs" data)]
-             ;; ["src/main/{{sanitized}}/storage.cljs" (render "src/main/app_name/storage.cljs" data)]
+
+             ["src/main/{{sanitized}}/common.cljs" (render "src/main/app_name/common.cljs" data)]
+             ["src/main/{{sanitized}}/popup.cljs" (render "src/main/app_name/popup.cljs" data)]
+             ["src/main/{{sanitized}}/content.cljs" (render "src/main/app_name/content.cljs" data)]
+             ["src/main/{{sanitized}}/sw.cljs" (render "src/main/app_name/sw.cljs" data)]
 
              ["ext/css/material-design-iconic-font.min.css" (render "ext/css/material-design-iconic-font.min.css")]
              ["ext/fonts/Material-Design-Iconic-Font.eot" (render "ext/fonts/Material-Design-Iconic-Font.eot")]

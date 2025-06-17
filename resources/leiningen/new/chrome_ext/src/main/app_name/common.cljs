@@ -1,4 +1,4 @@
-(ns demo.common
+(ns {{name}}.common
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [cljs.core.async.interop :refer-macros [<p!]]
             [cognitect.transit :as t]

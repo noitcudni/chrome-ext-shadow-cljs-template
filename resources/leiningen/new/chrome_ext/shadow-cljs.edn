@@ -4,8 +4,7 @@
   "src/main"
   "src/test"]
 
- :dependencies [[binaryage/chromex "0.8.6"]
-                [com.cognitect/transit-cljs "0.8.256"]
+ :dependencies [[com.cognitect/transit-cljs "0.8.256"]
                 [reagent "0.8.1"]
                 [re-com "2.6.0"]]
  :builds
